@@ -1,0 +1,46 @@
+/*make grid*/
+
+.container {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+    width: auto;
+}
+.grid {
+    padding-left: 15px;
+    padding-right: 15px;
+    width: auto;
+}
+
+
+/* CLEARFIX */
+
+.group {
+    clear: both;
+    &:before {
+        display: table;
+        content: "";
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@include mq-small {
+    .grid {
+        padding-left: 0;
+        padding-right: 0;
+    }
+};
+@include mq-medium {
+
+};
+@include mq-large {
+
+};
+@include mq-extra-large {
+    .wrap-container {
+        max-width: 1300px;
+        margin: 0 auto;
+    }
+};

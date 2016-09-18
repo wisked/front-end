@@ -1,0 +1,54 @@
+$smartphone-screen: 480px;
+$tablet-screen: 720px;
+$laptop-screen: 1024px;
+$pc-screen: 1280px;
+
+// colors
+$light-green-clr: #648880;
+
+$logo-border-clr: $light-green-clr;
+$body-font-color: #888;
+$header-font-clr: $light-green-clr;
+$header-h5-clr: #a9b2b9;
+$a-hover-clr: #a9b2b9;
+$a-clr: $light-green-clr;
+$primary-footer-clr: $light-green-clr;
+$primary-footer-a-clr: #fff;
+$primary-footer-a-hover-clr: $light-green-clr;
+$body-background-clr: #293f50;
+$hero-clr: #fff;
+$btn-clr: #fff;
+$btn-alt-hover-clr: $light-green-clr;
+$row-bacground-clr: #fff;
+
+/* FOR SPEAKERS.HTML */
+
+$speaker-info-border-clr: #dfe2e5;
+
+// media mixins
+@mixin mq-small{
+	@media (max-width: $smartphone-screen){
+		@content;
+	}
+}
+@mixin mq-medium{
+	@media (min-width: $smartphone-screen + 1px) and (max-width: $tablet-screen){
+		@content;
+	}
+}
+@mixin mq-large{
+	@media (min-width: $tablet-screen + 1px) and (max-width: $pc-screen){
+		@content;
+	}
+}
+@mixin mq-extra-large {
+    @media (min-width: $pc-screen + 1px){
+        @content;
+    }
+}
+
+// load font mixin
+
+@mixin load-fonts() {
+
+}

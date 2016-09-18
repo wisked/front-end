@@ -1,0 +1,16 @@
+#ask-form {
+  padding-top: 2em; }
+  #ask-form .label {
+    display: inline-block;
+    width: 35%;
+    vertical-align: top;
+    text-align: right;
+    margin-rght: 30px; }
+  #ask-form input[type="submit"] {
+    background: #1F6FD6;
+    background: linear-gradient(to bottom, #288541 40%, #50D68E);
+    border-radius: 5px;
+    box-shadow: 0 0 2px #1662C7;
+    margin-top: 2em;
+    padding: .7em .8em;
+    font-size: 1.2em; }

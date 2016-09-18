@@ -1,0 +1,16 @@
+.wrap-content{
+	@include mq-large{
+		content: "";
+		display: table;
+		clear: both;
+	}
+	@include mq-medium{
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	@include mq-small{
+
+	}
+}

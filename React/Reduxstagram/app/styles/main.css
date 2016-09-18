@@ -1,0 +1,58 @@
+@font-face {
+    font-family: "Gloria Hallelujah";
+    src: url('./fonts/Gloria_Hallelujah/GloriaHallelujah.ttf');
+}
+@font-face {
+    font-family: "Raleway";
+    src: url('./fonts/Raleway/Raleway-Medium.ttf');
+}
+#root h1 {
+    font-family: "Gloria Hallelujah";
+    font-weight: bold;
+    font-size: 3em;
+    text-decoration: none;
+    text-shadow: 2px 2px rgb(40, 191, 159);
+    text-align: center;
+    width: 100%;
+}
+.control-buttons {
+    margin-bottom: 4px;
+}
+.control-buttons a {
+    font-family: "Raleway";
+    font-size: bold;
+}
+.likes {
+    margin: 0 5px;
+    background-color: rgb(16, 215, 66);
+    border-radius: 10px;
+}
+.likes-heart{
+    display: none;
+}
+@media (max-width: 480px) {
+    .grid-figure {
+        margin: 0;
+    }
+    .photo-grid img{
+        max-width: 100%;
+    }
+    #root h1 {
+        font-size: 2em;
+    }
+}
+@media (min-width: 481px) and (max-width: 1280px) {
+    .grid-figure {
+        display: inline-block;
+        width: 400px;
+    }
+    .grid-photo-wrap {
+        margin:2px auto;
+
+    }
+    .photo-grid img {
+        border: 1px solid black;
+        max-width: 100%;
+
+    }
+}

@@ -1,0 +1,129 @@
+h1, h3, h4, h5, p {
+  margin-bottom: 22px;
+}
+h1 {
+    color: $header-font-clr;
+    font-size: 36px;
+    line-height: 44px;
+}
+h2 {
+    @extend h1;
+    font-size: 36px;
+}
+h3 {
+    font-size: 21px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    color: $header-h5-clr;
+    font-size: 14px;
+    font-weight: 400;
+}
+strong {
+    font-weight: 400;
+}
+cite, em {
+    font-style: italic;
+}
+a {
+    color: $a-clr;
+    &:hover {
+        color: $a-hover-clr;
+        transform: scale(1.2);
+    }
+}
+body {
+    font: 300 16px/22px "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.logo {
+    font-size: 2em;
+    line-height: 44px;
+}
+.lead {
+    text-align: center;
+}
+.lead p {
+    font-size: 21px;
+    line-height: 33px;
+}
+
+/* SECTION */
+
+.hero {
+    line-height: 44px;
+    color: $hero-clr;
+    text-align: center;
+    h2 {
+        font-size: 36px;
+    }
+    p {
+        font-size: 24px;
+    }
+}
+.teaser a:hover {
+    color: $a-hover-clr;
+}
+.primary-footer {
+    a {
+        color: $primary-footer-a-clr;
+        &:hover {
+            color: $primary-footer-a-hover-clr;
+        }
+    }
+}
+/* FOOTER */
+
+.primary-footer {
+    color: $primary-footer-clr;
+    font-size: 14px;
+    a {
+        color: $primary-footer-a-clr;
+        &:hover {
+            color: $primary-footer-a-hover-clr;
+        }
+    }
+    small {
+        font-weight: 400;
+    }
+}
+
+@include mq-small {
+    .container {
+        .logo {
+            float: none;
+            text-align: center;
+            font-size: 1.5em;
+            margin: 0 auto;
+        }
+        .tagline {
+            text-align: center;
+            margin: 20px auto;
+            font-size: 1.2em;
+        }
+        .primary-nav {
+            display: inline-block;
+        }
+    }
+    .hero {
+        line-height: 1.2em;
+        h2 {
+            font-size: 1.8em;
+        }
+        p {
+            font-size: 1.2em;
+        }
+
+    }
+};
+@include mq-medium {
+
+};
+@include mq-large {
+
+};
+@include mq-extra-large {
+
+};

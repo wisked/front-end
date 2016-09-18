@@ -1,0 +1,72 @@
+// form ask-form rules
+#ask-form{
+	padding-top: 2em;
+	p{
+		margin: 1.2em 0;
+	}
+	.label{
+		display: inline-block;
+		width: 35%;
+		vertical-align: top;
+		text-align: right;
+		margin-rght: 30px;
+	}
+	input[type="submit"]{
+		// margin-left: 45%;
+		background: $btn_color;
+		background: linear-gradient(to bottom, $btn_color 40%, #118BE4);
+		border-radius: 5px;
+		box-shadow: 0 0 2px $black_color;
+		margin-left: auto;
+		margin-right: auto;
+		padding: .6em .5em;
+		font-size: 1.2em;
+		&:hover{
+			background: #43CAE9;
+		}
+	}
+	textarea{
+		margin-top: 1em;
+		width: 100%;
+	}
+	input, textarea{
+		border-radius: 5px;
+		border: none;
+		font-size: 1em;
+		box-shadow: inset 0 0 3px $btn_color;
+		&:focus{
+			background-color: $input_color;
+			color: black;
+		}
+	}
+}
+@include mq-small{
+	#ask-form{
+		.label{
+			display: inline;
+			margin-bottom: .6em;
+			text-align: left;
+		}
+		input[type="submit"]{
+			padding: 0;
+			width: 100%;
+			&:hover{
+				background: #43CAE9;
+			}
+		}
+		textarea{
+			margin-top: 1em;
+			width: 100%;
+		}
+		input, textarea{
+			font-size: 1.1em;
+			max-width: 100%;
+			&:focus{
+				
+			}
+		}
+		select#category{
+			margin: 0;
+		}
+	}
+}

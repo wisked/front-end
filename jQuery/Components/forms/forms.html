@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Customize form</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="./plagins/jquery-validation-1.15.1/dist/jquery.validate.min.js"></script>
+</head>
+<body>
+	<style>
+		.form-container{
+			width: 80%;
+			margin-top: 10em;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.form-container input{
+			margin-bottom: 1em;
+		}
+		.label{
+			width: 15%;
+			display: inline-block;
+		}
+		.labelBlock{
+			margin-top: .8em;
+			margin-bottom: .8em;
+			width: 20%;
+			display: inline-block;
+		}
+		.indent{
+			display: inline-block;
+		}
+		#submit{
+			display: block;
+			margin-left: 20%;
+		}
+		#signup label.error{
+			font-size: 0.8em;
+			color: #F00;
+			font-weight: bold;
+			margin-left: 20px;
+		}
+	</style>
+	<header></header>
+	<div class="form-container">
+		<form id="signup">
+			<div>
+				<label for="username" class="label">Username</label>
+				<input type="text" name="username" id="username" size="36" class="required" title="Input your username">
+			</div>
+			<div>
+				<label for="password" class="label">Password</label>
+				<input type="password" name="password" id="password">
+			</div>
+			<div>
+				<label for="confirm_password" class="label">Confirm Password</label>
+				<input type="password" name="confirm_password" id="confirm_password">
+			</div>
+			<div>
+				<label for="dob" class="label">Date birthday</label>
+				<input type="text" name="dob" id="dob" class="date" title="Date format mm/dd/yyyy">
+			</div>
+			<div>
+				<label for="email" class="label">Email</label>
+				<input type="email" name="email" id="email">
+			</div>
+				<div><span class="label">Hobi</span>
+				<input type="checkbox" name="hobby" id="heliskiing" value="heliskiing" class="reqired" title="chouse 1 value">
+				<label for="heliskiing">heliskiing</label>
+				<input type="checkbox" name="hobby" id="pickle" value="pickle">
+				<label for="pickle">pickle</label>
+				<input type="checkbox" name="hobby" id="walnut" value="walnut">
+				<label for="walnut">Walnut</label>
+			</div>
+			<label for="planet" class="label">Planet favorite</label>
+			<select name="planet" id="planet" class="required" title="Choice palnet">
+				<option>Earth</option>
+				<option>Mars</option>
+				<option>Klingon</option>
+			</select>
+			<div><span class="label">Subscribe your email?</span>
+				<div class="indent">
+					<input type="radio" name="spam" id="yes" value="yes" class="required" title="Choice 1 option">
+					<label for="yes">Yes</label>
+					<input type="radio" name="spam" id="no" value="no">
+					<label for="yes">No</label>
+				</div>
+			</div>
+			<div><span class="label">Payment</span>
+				<input type="radio" name="payment" id="paypal" value="paypal">
+				<label for="paypal">PayPal</label>
+				<input type="radio" name="payment" id="visa" value="visa">
+				<label for="visa">Visa</label>
+				<input type="radio" name="payment" id="mastercard" value="mastercard">
+				<label for="mastercard">Mastercard</label>
+			</div>
+			<div id="creditCard" class="">
+				<div>
+					<label for="cardNumber" class="label">Number</label>
+					<input type="text" name="cardNumber" id="cardNumber">
+				</div>
+				<div>
+					<label for="expiration" class="label">Period</label>
+					<input type="text" name="expiration" id="expiration">
+				</div>
+			</div>
+			<label for="hideShip" class="">Hide pay info</label>
+			<input type="checkbox" name="hideShip" id="hideShip">
+			<input type="submit" name="submit" id="submit" value="Submit">
+		</form>
+	</div>
+	<script>
+		$(document).ready(function() {
+			$(':text:first').focus();
+			$('#paypal').click(function () {
+				$('#creditCard input').prop('disabled', true).css('backgroundColor', '#CCC');
+				$('#creditCard label').css('color', '#BBB');
+			});
+			$('#visa, #mastercard').click(function () {
+				 $('#creditCard input').prop('disabled', false).css('backgroundColor', '');
+				 $('#creditCard label').css('color','');
+			});
+			$('#hideShip').click(function () {
+				 if ($(this).prop('checked')) {
+				 	$('#creditCard').slideUp('600');
+				 }
+				 else{
+				 	$('#creditCard').slideDown('600');
+
+				 }
+			});
+			$('#signup').validate({
+				rules: {
+					email: {
+						required: true,
+						email: true
+					},
+					password: {
+						required: true,
+						rangelength: [8, 16]
+					},
+					confirm_password: {
+						equalTo: '#passsword'
+					}
+				},
+				messages: {
+					email: {
+						required: "INput email",
+						email: "Correct yoir email"
+					},
+					password: {
+						required: "Input password",
+						rangelength: "8 - 16 character"
+					},
+					confirm_password: {
+						equalTo: "password 2 is not as pass 1"
+					},
+					errorPlacement: function (error, elemnt) {
+						 if (element.is(":radio") || element.is(":checkbox")) {
+						 	error.appendTo(element.parent());
+						 }
+						 else {
+						 	error.inserAfter(element);
+						 }
+					}
+				}
+			});
+			$('#signup').submit(function () {
+				return false;
+			});
+		});
+	</script>
+</body>
+</html>

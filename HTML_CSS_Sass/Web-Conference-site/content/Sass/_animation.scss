@@ -1,0 +1,35 @@
+
+.photo {
+    width: auto;
+    img {
+        border-radius: 5px;
+        display: block;
+        margin-bottom: 22px;
+        width: 100%;
+
+    }
+}
+.card-container {
+    position: relative;
+    width: auto;
+    -webkit-perspective: 600;
+    perspective: 600;
+    height: 300px;
+}
+.card {
+	height: auto;
+	position: absolute;
+	transform-style: preserve-3d;
+  	transition: all 1s ease-in-out;
+  	width: 100%;
+  	&:hover {
+  		transform: rotateY(180deg);
+  	}
+}
+.card .side {
+  backface-visibility: hidden;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+// 

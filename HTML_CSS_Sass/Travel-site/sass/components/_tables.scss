@@ -1,0 +1,39 @@
+.hot-tours{
+	width: 100%;
+	caption{
+		margin-bottom: 1em;
+	}
+	th{
+		text-align: center;
+		padding: 1em 0;
+	}
+	td{
+		vertical-align: top;
+		padding: .5em .5em;
+	}
+	tr{
+		border-top: 2px solid $black_color;
+		&:nth-of-type(1n+2):hover{
+			background: $tour_tr_color;
+		}
+	}
+	
+	#description{
+		width: 50%;
+		font-size: .4em;
+	}
+	@include mq-large{
+		.examples-gallery{
+			padding: 0;
+			li{
+
+			}
+			img{
+				height: 3em;
+				&:hover{
+					border: 2px solid $black_color;
+				}	
+			}
+		}
+	}
+}

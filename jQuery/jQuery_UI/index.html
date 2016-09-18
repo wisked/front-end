@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>jQuery UI plugins</title>
+		<link rel="stylesheet" type="text/css" href="../plagins/jquery-ui-1.12.0/jquery-ui.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+		<script src="../plagins/jquery-ui-1.12.0/jquery-ui.min.js"></script>
+		<script src="./plg.js"></script>
+	</head>
+	<body>
+	<style>
+		.help-text{
+			margin-top: 2em;
+			margin-bottom: 2em;
+		}
+		#mainMenu > li{
+			width: 10em;
+			float: left;
+		}
+	</style>
+		<div>
+			<ul id="mainMenu">
+				<li><a href="#">About</a></li>
+				<li><a href="#">Contacts</a></li>
+				<li><a href="#">Custom</a>
+				<ul>
+					<li><a href="#">tem 1</a></li>
+					<li><a href="#">Item 2</a></li>
+					<li><a href="#">Item 3</a></li>
+				</ul>
+				</li>
+			</ul>
+		</div>
+		<div id="dialog">message</div>
+		<div class="help-text">
+			<a href="https://google.com" title="Google">Search system</a>
+		</div>
+		<br>
+		<div id="tabPanel">
+			<ul>
+				<li><a href="#details">Description of items</a></li>
+				<li><a href="#reviews">Reviews</a></li>
+				<li><a href="#order">Oreder item</a></li>
+			</ul>
+			<div id="details">Welcome!</div>
+			<div id="reviews">Good price!</div>
+			<div id="order">?</div>
+		</div>
+		<dv id="accordion">
+			<h3>1</h3>
+			<div>1</div>
+			<h3>2</h3>
+			<div>2</div>
+		</dv>
+		<script id="toolTip">
+			<img src="http://scholar.google.ru/intl/ru/scholar/images/1x/googlelogo_color_270x104dp.png">
+
+		</script>
+	</body>
+</html>

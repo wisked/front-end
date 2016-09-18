@@ -1,0 +1,230 @@
+
+
+@font-face{
+	@include font('../../fonts/Roboto/Roboto-Black.ttf', normal, normal);
+}
+@font-face{
+	@include font('../../fonts/Roboto/Roboto-Bold.ttf', bold, normal);
+}
+@font-face{
+	@include font('../../fonts/Roboto/Roboto-Italic.ttf', normal, italic);
+}
+@font-face{
+	@include font('../../fonts/Roboto/Roboto-BoldItalic.ttf', bold, italic);
+}
+// add Lora font
+@font-face{
+	@include font('../../fonts/Lora/Lora-Regular.ttf', normal, normal, "Lora");
+}
+@font-face{
+	@include font('../../fonts/Lora/Lora-Bold.ttf', bold, normal, "Lora");
+}
+@font-face{
+	@include font('../../fonts/Lora/Lora-Italic.ttf', normal, italic, "Lora");
+}
+@font-face{
+	@include font('../../fonts/Lora/Lora-BoldItalic.ttf', bold, italic, "Lora");
+}
+
+/* add head font-family */
+%headline{
+	font-family: "Roboto", Arial, sans-serif;
+}
+
+/* add text font-family */
+%textline{
+	font-family: "Lora", Times, serif;
+}
+
+.footer{
+		@include text(1.5em, 1em, normal, $copy_color);
+	
+	.page-footer-copy{
+		@include text(.8em, 1em, normal, $copy_color);
+		text-align: center;
+	}
+}
+
+.container{
+	h1, h2, h3, h4, a{
+		@extend %headline;
+	}
+	p, li{
+		@extend %textline;
+	}
+
+	.sidebar{
+		.nav{
+			
+			li{
+				&:first-child{
+					text-decoration: underline;
+				}
+			}
+			a{
+				opacity: .6;
+				color: $nav_a_color;
+				&:hover{
+					opacity: 1;
+				}
+			}
+		}
+	}
+	
+	.row{
+		h1{
+			@include text(2em, 2em, bold, $header_font_color);
+			font-style: italic;
+			text-align: center;
+		}
+	}
+	
+	.customers-gallery{
+		.gallery{
+			figcaption{
+				@include text(1em, 1em, bold, $header_font_color);
+			}
+		}
+	}
+	#ask-form{
+		@extend %textline;
+		@include text(1.1em, 1em, normal);
+		select{
+			font-size: .8em;
+		}
+	}
+	/* fonts setting for large screen */
+	@include mq-large{
+		.header {
+			a{
+				@include text(1.5em, 2em, normal, $header_font_color);
+			}
+		
+			h1{
+				@include text(2.5em, 2em, normal, $header_font_color);
+				text-align: center;
+			}
+			.slogan{
+				@include text(.9em, 1em, normal, $header_font_color);
+
+			}
+		}
+		.sidebar{
+			.nav{
+			
+				li{
+					@include text(1.5em, 1em, normal, $header_font_color);
+						
+					&:first-child{
+						padding-left: 1em;
+						color: $black_color;
+					}
+				}
+			}
+		}
+		.main{
+			p{
+				@include text(1.5em, 1.3em, normal);
+			}
+			li{
+				@include text(1.5em, 1.4em, normal);
+			}
+			h1{
+				@include text(2.5em, 2em, bold);
+			}
+			h3{
+				@include text(1.9em, 1.4em, bold);
+			}
+			figcaption{
+				@include text(.8em, 1em, italic);
+				text-align: center;
+			}
+		}
+		.page-footer{
+			@include text(1em, 1em, normal, $white_color);
+			.page-footer-copy{
+				text-align: center;
+			}
+		}
+	}
+	// table
+	.hot-tours{
+		caption{
+			@extend %headline;
+			@include text(1.1em, 1em, normal);
+			font-style: italic;
+			text-decoration: underline;
+		}
+		th{
+			@extend %headline;
+			@include text(1.2em, 1em, bold);
+			font-style: italic;
+		}
+		td{
+			@extend %textline;
+			@include text(1.1em, 1.2em, normal);
+		}
+	}
+	@include mq-medium{
+		.header{
+			.slogan{
+				h1{
+					@include text(1.5em, .3em, normal, $header_font_color);
+					text-align: center;
+				}
+			}
+			.nav_lst li{
+				a{
+				text-shadow: 0 0 1px $yellow_color;
+				}
+				&:nth-of-type(1n+2){
+					padding-left: .5em;
+				}
+			}
+		}
+
+		.sidebar{
+			.nav{
+				text-align: center;
+				li{
+					@include text(.9em, .9em, normal);
+
+					&:first-child{
+						@include text(1em, 1em, bold);
+					}
+				}
+			}
+		}
+
+		.main{
+			
+			figcaption{
+				text-align: center;
+			}
+		}
+	}	
+	@include mq-small{
+		.header{
+			.slogan{
+				@include text(1em, 1em, normal, $header_font_color);
+				// text-align: center;
+			}
+			.nav_lst{
+				li a{
+					@include text(.9em, 1.2em, normal, $white_color);
+				}
+			}
+		}
+		.sidebar{
+			.nav{
+				text-align: center;
+				li{
+					@include text(.9em, .8em, normal);
+					&:first-child{
+						@include text(1.3em, 1.2em, normal, $nav_a_color);
+					}
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="../../plagins/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="js/image-panels.js"></script>
+	<title>Document</title>
+</head>
+<style>
+	#gallery {
+		width: 90px;
+		border: 1px dotted black;
+		float:  left;
+	}
+	.main {
+		margin-top: 2em;
+		margin-left: 5em;
+	}
+	#gallery img {
+		display: inline-block;
+		margin: 0 0 10px 0;
+		border: 1px solid black;
+	}
+	#photo {
+		margin-left: 150px;
+		position: relative;
+	}
+	#photo img {
+		position: absolute;
+	}
+</style>
+<body>
+	<h2><a href="https://www.youtube.com/watch?v=hMxGhHNOkCU" id="youtube">jquery tutorial</a></h2>
+	<div id="photo-gallery">
+		<p>gallery 1</p>
+		<a href="../../img/large/blue.jpg"><img src="../../img/small/blue.jpg" alt=""></a>
+		<a href="../../img/large/slide3.jpg"><img src="../../img/small/slide3.jpg" alt=""></a>
+		<a href="../../img/large/slide1.jpg"><img src="../../img/small/slide1.jpg" alt=""></a>
+	</div>
+	<div class="main">
+		<div id="gallery">
+			<p>gallery 2</p>
+			<a href="../../img/large/slide1.jpg"><img src="../../img/small/slide1.jpg" width="70" height="70" alt="golf balls"></a>
+			<a href="../../img/large/yellow.jpg"><img src="../../img/small/yellow.jpg" width="70" height="70" alt="golf balls"></a>
+			<a href="../../img/large/purple.jpg"><img src="../../img/small/purple.jpg" width="70" height="70" alt="golf balls"></a>
+			<a href="../../img/large/slide4.jpg"><img src="../../img/small/slide4.jpg" width="70" height="70" alt="golf balls"></a>
+		</div>
+		<div id="photo"></div>
+	</div>
+</body>
+</html>

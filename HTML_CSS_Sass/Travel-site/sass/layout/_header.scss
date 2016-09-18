@@ -1,0 +1,109 @@
+#home #home-link, #ask-us #ask-link, #contacts #contacts-link, #customer #customers-link, #rewiev #rewiev-link{
+	text-shadow: 0 0 4px $white_color;
+}
+
+
+.header{
+		position: relative;
+		.slogan{
+			position: absolute;
+			top: 75%;
+			left: 15%;
+			right: 15%;
+		}
+		
+	@include mq-large{
+		background: url('../../img/back-ground.jpg') no-repeat center;
+		background-size: 100%;
+		width: 100%;
+		height: 500px;
+		margin-bottom: 20px;
+		
+		.nav_lst{
+			padding: 1em auto 0 auto;	
+
+		}
+		.nav_lst li{
+			display: inline-block;
+			padding: 0 .5em 0 .5em;
+			&:hover{
+				border: 1px solid rgba(255, 255, 255, .2);
+				background-color: rgba(255, 255, 255, .4);
+				border-radius: 25%;
+			}
+		}
+	}
+
+	@include mq-medium{
+		background: url('../../img/back-ground.jpg') no-repeat center;
+		background-size: cover;
+		height: 300px;
+		margin: 1% 1% 2em 1%;
+
+		// .slogan{
+		// 	position: relative;
+		// 	top: 9em;
+		// }
+		.nav_lst{
+			padding-top: 1em;
+			// opacity: .7;
+			
+			li:first-child{
+				padding-bottom: .7em;
+			}
+		}
+	}
+
+	@include mq-small{
+		background: url('../../img/smartphone-back.jpg') no-repeat center;
+		background-size: cover;
+		height: 200px;
+		position: relative;
+		.nav_lst{
+			background-color: rgba(0, 0, 0, .7);;
+			padding-left: 25%;
+			display: none;
+			// position: relative;
+		}
+		// .slogan{
+		// 	position: absolute;
+		// 	top: 80%;
+			
+		// }
+		.drop-menu{
+			position: relative;
+			top: 1em;
+			left: 1em;
+			// border: 1.2px solid $white_color;
+			width: 2em;
+			height: 1.3em;
+			border-radius: 20%;
+
+			.element1{
+				height: 25%;
+				margin-bottom: 10%;
+				background-color: $white_color;
+				border-top-left-radius: 20%;
+				border-top-right-radius: 20%;
+			}
+			.element2{
+				height: 25%;
+				background-color: $white_color;
+				margin-bottom: 10%;
+			}
+			.element3{
+				height: 25%;
+				background-color: $white_color;
+				border-bottom-right-radius: 20%;
+				border-bottom-left-radius: 20%;
+				// margin-bottom: 3%;
+			}
+		}
+		.nav_lst li{
+			
+			// a{
+			// 	color: black;
+			// }
+		}
+	}
+}

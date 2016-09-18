@@ -1,0 +1,31 @@
+* {
+	box-sizing: border-box;
+}
+body{
+	font-size: 1.5em;
+}
+.header {
+	width: auto;
+	height: 5em;
+	background-color: lightcoral;
+}
+.container {
+	margin-top: 2em;
+}
+.container textarea {
+	display: inline-block;
+	font-size: 1.1em;
+	width: 60%;
+
+}
+
+.container textarea:focus {
+	border: 2px solid darkblue;
+	box-shadow: 0 0 30px darkgoldenrod;
+}
+
+.container pre {
+	display: inline-block;
+	height: 20em;
+	width: 38%;
+}

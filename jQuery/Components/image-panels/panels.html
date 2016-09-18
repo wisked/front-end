@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<script src="../../plagins/bower_components/jquery/dist/jquery.min.js"></script>
+	<script src="../../plagins/jquery-ui-1.12.0/jquery-ui.min.js"></script>
+	<script src="./js/panels.js"></script>
+	<title>panel</title>
+</head>
+<body>
+	<style>
+		#dashboard {
+			width: 110px;
+			background-color: rgb(255, 211, 224);
+			padding: 20px 20px 0 20px;
+	        position: absolute;
+	        left: -92px;
+	        z-index: 100;
+		}
+		#dashboard img {
+			margin-bottom: 20px;
+			border: 1px solid rgb(0, 0, 0);
+		}
+
+		/*  */
+		#figure {
+			position: relative;
+			width: 400px;
+			margin-left: 100px;
+			height: 400px;
+			overflow: hidden;
+		}
+		#photo {
+			position: absolute;
+			left: -400px;
+		}
+		@keyframes growProgressBar {
+			0% {
+				width: 0%;
+				background-color: red;
+			}
+			50% {
+				background-color: yellow;
+			}
+			100% {
+				width: 90%;
+				background-color: green;
+			}
+		}
+		.progressBar {
+			height: 10px;
+			animation-name: growProgressBar;
+			animation-duration: 10s;
+			animation-fill-mode: forwards;
+			animation-play-state: paused;
+		}
+	</style>
+	
+	<div class="wrapper">
+		<div id="dashboard">
+			<img src="../../img/small/yellow_h.jpg" alt="yellow">
+			<img src="../../img/small/slide2_h.jpg" alt="slide2">
+			<img src="../../img/small/slide3.jpg" alt="slide3">
+			<img src="../../img/small/red_h.jpg" alt="red">
+			<img src="../../img/small/slide4_h.jpg" alt="slide4">
+			<img src="../../img/small/slide6_h.jpg" alt="slide6">
+		</div>
+		<div id="figure">
+			<img src="../../img/pencils.jpg" alt="pencils" id="photo">
+			<button id="start">start</button>
+			<button id="pause">pause</button>
+			<div class="progressBar"></div>
+		</div>
+	</div>
+</body>
+</html>
